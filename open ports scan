@@ -1,0 +1,14 @@
+import socket
+IP= raw_input("Please Enter IP Number:"
+Start_Port= input("Please Enter Start Port:")
+End_Port= input(" Please Enter End Port:") 
+for port in range(Start_Port,End_Port)
+    try:
+        socket= socket.socket()
+        socket.connect(IP,port)
+        banner= str(socket.recv(1024))
+        Print("Port:", str(port)
+        Print("Banner:",banner)
+        socket.close()
+    except:
+        pass
